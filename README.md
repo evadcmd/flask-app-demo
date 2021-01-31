@@ -9,6 +9,7 @@ It is a sample of restful flask app.
 2. Edit the RESTful API in 「flask_app/rest.py」.
 3. Execute database migration.
 4. run & test.
+if you want, you could change the basic settings in the「config.yml」 file
 
 ## db migration
 we use Flask-Migrate to manage database migration.
@@ -25,15 +26,15 @@ $ flask db init
 ```bash
 $ flask db migrate -m '${comment about the revision}'
 ```
-3. apply changes to the database:
+3. apply the changes to the database:
 ```bash
 $ flask db upgrade
 ```
 
 ## Run & Test
 ### Run server (local)
-postgresql in required.
-Edit username and password in「config.yml」 file
+postgresql is required.
+Edit username and password in the「config.yml」 file
 ```bash
 $ expose FLASK_APP=flask_app/server.py
 $ flask run --host=0.0.0.0
