@@ -1,0 +1,22 @@
+version: "3"
+services:
+  server:
+    container_name: flask-app
+    image: flask-app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: server
+    depends_on:
+      - db
+    ports:
+      - 5000:5000
+    environment:
+      - IN_CONTAINER=true
+  db:
+    container_name: flask-db
+    image: postgres
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=flask_db

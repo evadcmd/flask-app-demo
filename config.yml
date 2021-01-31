@@ -1,0 +1,11 @@
+server:
+  context-path: /flask-app
+  port: 5000
+
+database:
+  type: postgresql
+  ip: localhost
+  port: 5432
+  username: root
+  password: root
+  dbname: flask_db
